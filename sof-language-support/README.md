@@ -1,10 +1,12 @@
-# sof-language-support README
+# SOF language support
 
-A small Visual Studio Code extension that defines syntax highlighting grammar for the SOF programming language.
+A small Visual Studio Code extension that defines syntax highlighting grammar for the SOF programming language. The language itself is an open-source project by kleinesfilmröllchen and [can be found here](https://github.com/kleinesfilmroellchen/sof-language). Contributions to both the language and this syntax highlighter are welcome; [sof-syntaxhighlight GitHub](https://github.com/kleinesfilmroellchen/sof-syntaxhighlight).
+
+This package is licensed under MIT. A different license applies to the SOF language and its interpreter.
 
 ## Features
 
-This extension enables syntax highlighting on ".sof" and ".stackof" files, the Stack with Objects and Functions (SOF) programming language source code. Because the language itself is reasonably simple, highlighting itself is simple as well.
+This extension enables syntax highlighting on ".sof" and ".stackof" files, the Stack with Objects and Functions (SOF) programming language source code. Because the language itself is reasonably simple, syntax highlighting itself is simple as well.
 
 ## Requirements
 
@@ -20,4 +22,6 @@ None.
 
 ## Release Notes
 
-None.
+### 0.0.1
+
+First alpha release, reflecting the language's alpha state.
