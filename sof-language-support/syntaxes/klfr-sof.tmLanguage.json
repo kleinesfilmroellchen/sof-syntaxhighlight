@@ -3,18 +3,37 @@
 	"name": "Stack with Objects and Functions (SOF)",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
+			"include": "#literals"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#codeblock"
+		},
+		{
+			"include": "#known-functions"
+		},
+		{
+			"include": "#identifier"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.klfr-sof",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+		"comments": {
+			"patterns": [
+				{
+					"begin": "\\#\\*",
+					"end": "\\*\\#",
+					"name": "comment.block.klfr-sof"
+				},
+				{
+					"name": "comment.line.number-sign.klfr-sof",
+					"match": "\\#.*"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.klfr-sof",
@@ -23,9 +42,89 @@
 			"patterns": [
 				{
 					"name": "constant.character.escape.klfr-sof",
-					"match": "\\\\."
+					"match": "\\\\(f|t|n|\\\"|(?:u([0-9a-fA-F]{4})))"
 				}
 			]
+		},
+		"codeblock": {
+			"patterns": [
+				{
+					"begin": "\\b\\{\\b",
+					"end": "\\b\\}\\b",
+					"patterns": [
+						{
+							"include": "$self"
+						}
+					]
+				}
+			]
+		},
+		"identifier": {
+			"name": "variable.name.klfr-sof",
+			"match": "\\b\\p{L}[\\p{L}0-9_'\\:]*\\b"
+		},
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.klfr-sof",
+					"match": "\\b(if|dowhile|while|ifelse|(switch(\\:\\:)?))\\b"
+				},
+				{
+					"name": "keyword.operator.arithmetic.klfr-sof",
+					"match": "(\\+|\\-|\\*|\\/|\\^)"
+				},
+				{
+					"name": "keyword.operator.boolean.klfr-sof",
+					"match": "\\b(and|or|xor|not)\\b"
+				},
+				{
+					"name": "keyword.operator.comparison.klfr-sof",
+					"match": "(([\\<\\>\\/]?\\=)|[\\<\\>]|is)"
+				},
+				{
+					"name": "keyword.other.stack.klfr-sof",
+					"match": "\\b(dup|pop)\\b"
+				},
+				{
+					"name": "keyword.other.variables.klfr-sof",
+					"match": "\\b(def|globaldef|function|[\\:\\.])\\b"
+				}
+			]
+		},
+		"literals": {
+			"patterns": [
+				{
+					"include": "#strings"
+				},
+				{
+					"name": "constant.boolean.klfr-sof",
+					"match": "\\b(True|False|true|false)\\b"
+				},
+				{
+					"name": "constant.numeric.decimal.klfr-sof",
+					"match": "(\\+|\\-)?(?:([0-9]+)\\.([0-9]+)([eE][\\-\\+][0-9]+)?)"
+				},
+				{
+					"name": "constant.numeric.integer.hex.klfr-sof",
+					"match": "((\\+|\\-)?(0[hx])[0-9a-fA-F]+)"
+				},
+				{
+					"name": "constant.numeric.integer.binary.klfr-sof",
+					"match": "((\\+|\\-)?(0b)[01]+)"
+				},
+				{
+					"name": "constant.numeric.integer.octal.klfr-sof",
+					"match": "((\\+|\\-)?(0o)[0-7]+)"
+				},
+				{
+					"name": "constant.numeric.integer.decimal.klfr-sof",
+					"match": "((\\+|\\-)?(0d)?[0-9]+)|0"
+				}
+			]
+		},
+		"known-functions": {
+			"name":"entity.name.function.klfr-sof",
+			"match": "\\b(describe|describes|assert|write|writeln|(convert\\:(int|string|callable))|(random(01|Int))|input|inputln)\\b"
 		}
 	},
 	"scopeName": "source.klfr-sof"
