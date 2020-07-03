@@ -3,6 +3,10 @@
     "displayName": "sof-language-support",
     "description": "Language support for the experimental SOF programming language",
     "version": "0.0.1",
+    "author": {
+        "name": "kleinesfilmröllchen"
+    },
+    "publisher": "<to be filled out>",
     "engines": {
         "vscode": "^1.46.0"
     },
@@ -10,16 +14,27 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "klfr-sof",
-            "aliases": ["Stack with Objects and Functions (SOF)", "klfr-sof"],
-            "extensions": [".sof",".stackof"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "klfr-sof",
-            "scopeName": "source.klfr-sof",
-            "path": "./syntaxes/klfr-sof.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "klfr-sof",
+                "aliases": [
+                    "Stack with Objects and Functions (SOF)",
+                    "klfr-sof",
+                    "SOF"
+                ],
+                "extensions": [
+                    ".sof",
+                    ".stackof"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "klfr-sof",
+                "scopeName": "source.klfr-sof",
+                "path": "./syntaxes/klfr-sof.tmLanguage.json"
+            }
+        ]
     }
 }
