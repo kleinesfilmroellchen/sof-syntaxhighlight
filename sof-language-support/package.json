@@ -6,13 +6,17 @@
     "author": {
         "name": "kleinesfilmröllchen"
     },
-    "publisher": "<to be filled out>",
+    "publisher": "kleinesfilmroellchen",
     "engines": {
         "vscode": "^1.46.0"
     },
     "categories": [
         "Programming Languages"
     ],
+    "repository": {
+        "url": "https://github.com/kleinesfilmroellchen/sof-syntaxhighlight",
+        "type": "git"
+    },
     "contributes": {
         "languages": [
             {
