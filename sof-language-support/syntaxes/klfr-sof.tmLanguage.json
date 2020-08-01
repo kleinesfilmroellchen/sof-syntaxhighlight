@@ -49,6 +49,7 @@
 		"codeblock": {
 			"patterns": [
 				{
+					"name": "meta.function.klfr-sof",
 					"begin": "\\b\\{\\b",
 					"end": "\\b\\}\\b",
 					"patterns": [
@@ -67,7 +68,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.klfr-sof",
-					"match": "\\b(if|dowhile|while|ifelse|(switch(\\:\\:)?))\\b"
+					"match": "\\b(if|dowhile|while|ifelse|return|(switch(\\:\\:)?))\\b"
 				},
 				{
 					"name": "keyword.operator.arithmetic.klfr-sof",
@@ -86,8 +87,12 @@
 					"match": "\\b(dup|pop)\\b"
 				},
 				{
+					"name": "keyword.other.modularity.klfr-sof",
+					"match": "\\b(use|export|namespace)\\b"
+				},
+				{
 					"name": "keyword.other.variables.klfr-sof",
-					"match": "\\b(def|globaldef|function|[\\:\\.])\\b"
+					"match": "\\b(def|globaldef|function|constructor|nativecall|[\\:\\.])\\b"
 				}
 			]
 		},
@@ -124,7 +129,7 @@
 		},
 		"known-functions": {
 			"name":"entity.name.function.klfr-sof",
-			"match": "\\b(describe|describes|assert|write|writeln|(convert\\:(int|string|callable))|(random(01|Int))|input|inputln)\\b"
+			"match": "\\b(describe|describes|assert|write|writeln|(convert\\:(int|float|string|callable))|(random\\:(01|int))|input|inputln)\\b"
 		}
 	},
 	"scopeName": "source.klfr-sof"

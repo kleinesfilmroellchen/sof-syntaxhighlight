@@ -1,8 +1,8 @@
 {
     "name": "sof-language-support",
-    "displayName": "sof-language-support",
-    "description": "Language support for the experimental SOF programming language",
-    "version": "0.0.1",
+    "displayName": "SOF language support",
+    "description": "Language support for the experimental Stack with Objects and Functions programming language.",
+    "version": "0.0.2",
     "author": {
         "name": "kleinesfilmröllchen"
     },

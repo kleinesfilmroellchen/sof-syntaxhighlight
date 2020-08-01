@@ -1,9 +1,10 @@
 # Change Log
 
-All notable changes to the "sof-language-support" extension will be documented in this file.
+## 0.0.1
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+First alpha release, reflecting the language's alpha state.
 
-## [Unreleased]
+## 0.0.2
 
-- Initial release
+- Fixed several issues with syntax highlighting.
+- Added some keywords and removed others, reflecting the language's evolution.
