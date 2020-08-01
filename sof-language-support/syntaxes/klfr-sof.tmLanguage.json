@@ -83,8 +83,12 @@
 					"match": "(([\\<\\>\\/]?\\=)|[\\<\\>]|is)"
 				},
 				{
-					"name": "keyword.other.stack.klfr-sof",
-					"match": "\\b(dup|pop)\\b"
+					"name": "keyword.operator.stack.klfr-sof",
+					"match": "\\b(dup|pop|swap)\\b"
+				},
+				{
+					"name": "keyword.operator.string.klfr-sof",
+					"match": "\\b(cat)\\b"
 				},
 				{
 					"name": "keyword.other.modularity.klfr-sof",

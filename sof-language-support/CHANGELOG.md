@@ -8,3 +8,4 @@ First alpha release, reflecting the language's alpha state.
 
 - Fixed several issues with syntax highlighting.
 - Added some keywords and removed others, reflecting the language's evolution.
+- Added basic programmatic language features.
