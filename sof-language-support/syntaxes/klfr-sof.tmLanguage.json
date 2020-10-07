@@ -68,7 +68,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.klfr-sof",
-					"match": "\\b(if|dowhile|while|ifelse|return|(switch(\\:\\:)?))\\b"
+					"match": "\\b(if|return:0|switch|dowhile|while|ifelse|return)\\b|(\\bswitch::)"
 				},
 				{
 					"name": "keyword.operator.arithmetic.klfr-sof",
@@ -92,11 +92,11 @@
 				},
 				{
 					"name": "keyword.other.modularity.klfr-sof",
-					"match": "\\b(use|export|namespace)\\b"
+					"match": "\\b(use|export)\\b"
 				},
 				{
 					"name": "keyword.other.variables.klfr-sof",
-					"match": "\\b(def|globaldef|function|constructor|nativecall|[\\:\\.])\\b"
+					"match": "\\b(def|globaldef|function|constructor|nativecall)\\b|[:\\.;]"
 				}
 			]
 		},
